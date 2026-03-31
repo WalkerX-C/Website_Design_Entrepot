@@ -26,8 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         username: /^.{6,12}$/,
         password: /^.{8,16}$/,
     };
-    
-    // 错误提示信息
+
     const errorMessages = {
         name: 'The name can only contain letters and spaces and cannot be empty.',
         address: 'The address can only contain letters, numbers, and spaces, and cannot be empty.',
