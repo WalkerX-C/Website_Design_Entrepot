@@ -73,6 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (isFormValid) {
             alert('successfully registered');
+            //预留后面需要的跳转到homepage的接口部分，这部分先留空
+            
             form.reset();
             for (const key in inputs) {
                 inputs[key].classList.remove('input-success', 'input-error');
