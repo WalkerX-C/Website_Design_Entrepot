@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     const regexPatterns = {
-        name: /^[a-zA-Z\s]+$/,
-        address: /^[a-zA-Z0-9\s]+$/,
+        name: /^(?!\s*$)[a-zA-Z\s]{2,50}$/,
+        address: /^(?!\s*$)[a-zA-Z0-9\s]+$/,
         phone: /^1[3-9]\d{9}$/,
         email: /^[^\s@]+@[^\s@]+\.(com|cn)$/,
         username: /^.{6,12}$/,
@@ -28,13 +28,17 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     const errorMessages = {
-        name: 'The name can only contain letters and spaces and cannot be empty.',
-        address: 'The address can only contain letters, numbers, and spaces, and cannot be empty.',
-        phone: 'Enter a valid phone number',
-        email: 'Enter a valid email address',
+        name: 'The name can only contain letters and spaces, cannot be empty or all spaces, and should be 2-50 characters long.',
+        address: 'The address can only contain letters, numbers, and spaces, and cannot be empty or all spaces.',
+        phone: 'Please enter a valid 11-digit Chinese phone number (starts with 13-19).',
+        email: 'Please enter a valid email address ending with .com or .cn.',
         username: 'The username must be between 6 and 12 characters.',
         password: 'The password must be between 8 and 16 characters long.'
     };
+
+    function redirectToHomepage() {
+        window.location.href = 'homepage.html';
+    }
 
     function validateInput(key) {
         const input = inputs[key];
@@ -72,15 +76,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (isFormValid) {
-            alert('successfully registered');
-            //预留后面需要的跳转到homepage的接口部分，这部分先留空
-            
+            alert('Registration successful!');
             form.reset();
             for (const key in inputs) {
                 inputs[key].classList.remove('input-success', 'input-error');
+                errors[key].textContent = '';
             }
+            redirectToHomepage();
         } else {
-            alert('Please check your information and resubmit');
+            alert('Please check your information and resubmit.');
         }
     });
 
