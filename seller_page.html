@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Items</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f5f7;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* response Grid View system*/
+        .row::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        /* phone in first */
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+            width: 100%;
+        }
+
+        /* desktop */
+        @media only screen and (min-width: 768px) {
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+        }
+
+        /* page layout style */
+        .header {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #d2d2d7;
+        }
+
+        .container {
+            background-color: #ffffff;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #d2d2d7;
+            max-width: 800px;
+        }
+
+        h1, h2 {
+            color: #1d1d1f
+        }
+
+        /* fundamental style of list element */
+        input[type="text"],
+        input[type="number"],
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #d2d2d7;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        /* button style */
+        .submit-btn {
+            background-color: #0071e3;
+            color: white;
+            padding: 15px;
+            border: none;
+            width: 100%;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        
+        .add-btn {
+            background-color: #e8e8ed;
+            color: #1d1d1f;
+            border: 1px solid #d2d2d7;
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        /* form style */
+        table {
+            width: 100%;
+        }
+
+        td, th {
+            border-bottom: 1px solid #d2d2d7;
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <h2>Seller Center</h2>
+    </div>
+
+    <div class="container row">
+        <form id="productForm">
+
+            <div class="col-12">
+                <h2>Basic Information</h2>
+            </div>
+
+            <div class="col-12">
+                <label>Product Name</label><br>
+                <input type="text" id="productName" placeholder="e.g.: Apple iPhone 15 Pro">
+            </div>
+
+            <div class="col-6">
+                <label>Brand</label><br>
+                <input type="text" id="brand" placeholder="e.g.: Apple">
+            </div>
+
+            <div class="col-6">
+                <label>Model</label><br>
+                <input type="text" id="model" placeholder="e.g.: A2994">
+            </div>
+
+            <div class="col-6">
+                <label>Basic Price</label><br>
+                <input type="text" id="basicPrice" placeholder="Please enter a number">
+            </div>
+
+            <div class="col-6">
+                <label>Color</label><br>
+                <input type="text" id="color" placeholder="e.g.: Rose Gold">
+            </div>
+
+            <div class="col-12">
+                <input type="button" value="Save & Publish" class="submit-btn" onclick="submitForm()">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        //submit form
+        function submitForm() {
+            var name = document.getElementById("productName").value;
+
+            if (name == "") {
+                window.alert("Please input the name of product!")
+            } else {
+                window.alert("The product " + name + " has saved successfully!")
+            }
+        }
+    </script>
+</body>
+</html>
