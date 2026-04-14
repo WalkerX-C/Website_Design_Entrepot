@@ -150,12 +150,43 @@
             </div>
 
             <div class="col-12">
+                <h2>Product Image</h2>
+                <input type="file" id="productImage">
+            </div>
+
+            <div class="col-12">
+                <h2>Tier Price Table</h2>
+                <table id="tierTable">
+                    <tr>
+                        <th>Minimum Quantity</th>
+                        <th>Maximum Quantity</th>
+                        <th>Unit Price</th>
+                    </tr>
+                    <tbody id="tierTableBody">
+                        <tr>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="button" class="add-btn" value="+ Add Tier Price" onclick="addTierRow()">
+            </div>
+
+            <div class="col-12">
                 <input type="button" value="Save & Publish" class="submit-btn" onclick="submitForm()">
             </div>
         </form>
     </div>
 
     <script>
+        // TierRow
+        function addTierRow() {
+            var tableBody = document.getElementById("tierTableBody");
+            var newRow = "<tr><td><input type='number'></td><td><input type='number'></td><td><input type='number'></td></tr>"
+            tableBody.innerHTML = tableBody.innerHTML + newRow;
+        }
+
         //submit form
         function submitForm() {
             var name = document.getElementById("productName").value;
