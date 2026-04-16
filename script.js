@@ -1,91 +1,80 @@
-document.addEventListener('DOMContentLoaded', function() {
+function checkField(inputId, errorId, regex, errorMsg) {
+    var inputElement = document.getElementById(inputId);
+    var errorElement = document.getElementById(errorId);
+    var value = inputElement.value;
 
-    const form = document.getElementById('registrationForm');
-    const inputs = {
-        name: document.getElementById('name'),
-        address: document.getElementById('address'),
-        phone: document.getElementById('phone'),
-        email: document.getElementById('email'),
-        username: document.getElementById('username'),
-        password: document.getElementById('password')
-    };
-    const errors = {
-        name: document.getElementById('nameError'),
-        address: document.getElementById('addressError'),
-        phone: document.getElementById('phoneError'),
-        email: document.getElementById('emailError'),
-        username: document.getElementById('usernameError'),
-        password: document.getElementById('passwordError')
-    };
+    var valueWithoutSpaces = value.replace(/ /g, "");
 
-    const regexPatterns = {
-        name: /^(?!\s*$)[a-zA-Z\s]{2,50}$/,
-        address: /^(?!\s*$)[a-zA-Z0-9\s]+$/,
-        phone: /^1[3-9]\d{9}$/,
-        email: /^[^\s@]+@[^\s@]+\.(com|cn)$/,
-        username: /^.{6,12}$/,
-        password: /^.{8,16}$/,
-    };
-
-    const errorMessages = {
-        name: 'The name can only contain letters and spaces, cannot be empty or all spaces, and should be 2-50 characters long.',
-        address: 'The address can only contain letters, numbers, and spaces, and cannot be empty or all spaces.',
-        phone: 'Please enter a valid 11-digit Chinese phone number (starts with 13-19).',
-        email: 'Please enter a valid email address ending with .com or .cn.',
-        username: 'The username must be between 6 and 12 characters.',
-        password: 'The password must be between 8 and 16 characters long.'
-    };
-
-    function redirectToHomepage() {
-        window.location.href = 'homepage.html';
+    if (valueWithoutSpaces.length > 0 && regex.test(value)) {
+        errorElement.innerHTML = "";
+        inputElement.className = "input-success";
+        return true;
+    } else {
+        errorElement.innerHTML = errorMsg;
+        inputElement.className = "input-error";
+        return false;
     }
+}
 
-    function validateInput(key) {
-        const input = inputs[key];
-        const error = errors[key];
-        const value = input.value.trim();
+function validateName() {
+    var regex = /^[a-zA-Z ]{2,50}$/;
+    var msg = "The name can only contain letters and spaces (2-50 chars).";
+    return checkField("name", "nameError", regex, msg);
+}
 
-        const isValid = regexPatterns[key].test(value) && value !== '';
+function validateEmail() {
+    var regex = /^[^@]+@[^@]+\.(com|cn)$/;
+    var msg = "Please enter a valid email address ending with .com or .cn.";
+    return checkField("email", "emailError", regex, msg);
+}
 
-        if (isValid) {
-            error.textContent = '';
-            input.classList.remove('input-error');
-            input.classList.add('input-success');
-        } else {
-            error.textContent = errorMessages[key];
-            input.classList.remove('input-success');
-            input.classList.add('input-error');
-        }
-        return isValid;
+function validateAddress() {
+    var regex = /^[a-zA-Z0-9 ]+$/;
+    var msg = "Address can only contain letters, numbers, and spaces.";
+    return checkField("address", "addressError", regex, msg);
+}
+
+function validatePhone() {
+    var regex = /^1[3-9][0-9]{9}$/;
+    var msg = "Please enter a valid 11-digit Chinese phone number.";
+    return checkField("phone", "phoneError", regex, msg);
+}
+
+function validateUsername() {
+    var regex = /^.{6,12}$/;
+    var msg = "The username must be between 6 and 12 characters.";
+    return checkField("username", "usernameError", regex, msg);
+}
+
+function validatePassword() {
+    var regex = /^.{8,16}$/;
+    var msg = "The password must be between 8 and 16 characters long.";
+    return checkField("password", "passwordError", regex, msg);
+}
+
+function validateForm() {
+    var isNameValid = validateName();
+    var isEmailValid = validateEmail();
+    var isAddressValid = validateAddress();
+    var isPhoneValid = validatePhone();
+    var isUserValid = validateUsername();
+    var isPassValid = validatePassword();
+
+    if (isNameValid && isEmailValid && isAddressValid && isPhoneValid && isUserValid && isPassValid) {
+        alert('Registration successful!');
+        window.location.href = 'homepage.html'; 
+        return false;
+    } else {
+        alert('Please check your information and resubmit.');
+        return false;
     }
+}
 
-    for (const key in inputs) {
-        inputs[key].addEventListener('blur', function() {
-            validateInput(key);
-        });
+function resetForm() {
+    var inputs = ["name", "email", "address", "phone", "username", "password"];
+    for (var i = 0; i < inputs.length; i++) {
+        var inputId = inputs[i];
+        document.getElementById(inputId).className = "";
+        document.getElementById(inputId + "Error").innerHTML = "";
     }
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        let isFormValid = true;
-        for (const key in inputs) {
-            if (!validateInput(key)) {
-                isFormValid = false;
-            }
-        }
-        
-        if (isFormValid) {
-            alert('Registration successful!');
-            form.reset();
-            for (const key in inputs) {
-                inputs[key].classList.remove('input-success', 'input-error');
-                errors[key].textContent = '';
-            }
-            redirectToHomepage();
-        } else {
-            alert('Please check your information and resubmit.');
-        }
-    });
-
-});
+}
