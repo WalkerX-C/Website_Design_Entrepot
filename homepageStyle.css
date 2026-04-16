@@ -2,7 +2,6 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-/**/
 
 body {
     margin: 0;
@@ -16,16 +15,14 @@ body {
 }
 
 /* default: phone */
-
-    .col-s-2  { width: 100%; }
-    .col-s-6  { width: 100%; }
-    .col-s-10 { width: 100%; }
-    .col-s-12 { width: 100%; }
-    .col-2  { width: 100%; }
-    .col-3  { width: 100%; }
-    .col-10 { width: 100%; }
-    .col-12 { width: 100%; }
-
+.col-s-2  { width: 100%; }
+.col-s-6  { width: 100%; }
+.col-s-10 { width: 100%; }
+.col-s-12 { width: 100%; }
+.col-2    { width: 100%; }
+.col-3    { width: 100%; }
+.col-10   { width: 100%; }
+.col-12   { width: 100%; }
 
 .row::after {
     content: "";
@@ -88,7 +85,7 @@ body {
     margin: 0;
     font-size: 40px;
     line-height: 60px;
-    text-align: center;
+    text-align: left;
 }
 
 /* menu */
@@ -139,14 +136,15 @@ body {
 }
 
 /* top product pictures */
+.picture-box {
+    height: 220px;
+}
+
 .picture-box img {
     width: 100%;
-    max-height: 220px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    height: 100%;
+    object-fit: cover; /* 关键 */
     border-radius: 18px;
-    background-color: white;
     transition: 0.3s;
 }
 
@@ -166,6 +164,10 @@ body {
 
 .apple-card:hover {
     transform: translateY(-8px) scale(1.02);
+}
+
+.product-link {
+    cursor: pointer;
 }
 
 /* fixed internal sections */
@@ -245,6 +247,7 @@ body {
     transform: translateY(-8px) scale(1.02);
 }
 
+
 .intro-icon-area {
     height: 25%;
 }
@@ -304,4 +307,83 @@ body {
 
 .gray {
     color: #888;
+}
+
+/* floating island */
+.intro-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.20);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.intro-modal-box {
+    width: 70%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    margin: 10% auto 0 auto;
+    transition: 0.3s;
+}
+
+.intro-modal-box h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.intro-modal-box p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.intro-modal-close {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: #f2f2f2;
+    color: #666;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    float: right;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.intro-modal-close:hover {
+    transform: scale(1.08);
+}
+
+/* tablet and phone */
+@media only screen and (max-width: 767px) {
+    .header h1 {
+        font-size: 40px;
+        line-height: 1.3;
+    }
+
+    .apple-card {
+        height: 500px;
+    }
+
+    .intro-modal-box {
+        width: 90%;
+        margin: 80px auto 0 auto;
+        padding: 20px;
+    }
+
+    .intro-modal-box h2 {
+        font-size: 24px;
+    }
+
+    .intro-modal-box p {
+        font-size: 16px;
+    }
 }
