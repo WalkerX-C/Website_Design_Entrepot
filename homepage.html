@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <title>MY Store - Homepage</title>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homepageStyle.css">
 </head>
@@ -10,13 +9,15 @@
     <div class="page">
 
         <!-- Top part -->
+
         <div class="row">
 
-            <div class="col-s-4 col-4 header">
-                <h1 style="font-size: 64px;">Welcome to MY Store</h1>
+            <div class="col-s-10 col-10 header">
+                <h1>Welcome to MY Store</h1>
+                <p class="header-subtitle" style="color: rgb(198, 198, 198);">A simple and modern place to buy and sell electronic products.</p>
             </div>
 
-            <div class="col-s-8 col-8 logo-area">
+            <div class="col-s-2 col-2 logo-area">
                 <a href="homepage.html" class="logo">
                     <img src="icon.png" alt="Logo" width="45">
                 </a>
@@ -25,12 +26,13 @@
         </div>
 
         <!-- Menu -->
+
         <div class="row">
             <div class="col-12 menu">
-                <a href="homepage.html">HomePage</a>
+                <a href="purchaser_login.html">Buyer Login</a>
                 <a href="search.html">Search</a>
-                <a href="sell.html">Seller Page</a>
-                <a href="aboutus.html">About Us</a>
+                <a href="seller_page.html">Product Registration</a>
+                <a href="seller_registration.html">Seller Login</a>
             </div>
         </div>
 
@@ -39,22 +41,23 @@
             <div class="col-12">
                 <h2 class="section-center">Our Products</h2>
             </div>
-
+            
             <div class="col-s-6 col-3 picture-box">
                 <img src="laptop.png" alt="Laptop 1">
             </div>
             <div class="col-s-6 col-3 picture-box">
-                <img src="laptop.png" alt="Laptop 2">
+                <img src="iPhone17ProMax.png" alt="iPhone 1">
             </div>
             <div class="col-s-6 col-3 picture-box">
-                <img src="laptop.png" alt="Laptop 3">
+                <img src="switch.png" alt="Switch">
             </div>
             <div class="col-s-6 col-3 picture-box">
-                <img src="laptop.png" alt="Laptop 4">
+                <img src="Watch.png" alt="Watch">
             </div>
         </div>
 
         <!-- Product part 1 -->
+
         <div class="row">
             <div class="col-12 product-class">
                 <h2>Latest Models. <span>Take a look at what’s new, now.</span></h2>
@@ -65,16 +68,16 @@
             <div class="col-s-6 col-3">
                 <div class="apple-card">
                     <div class="card-name">
-                        <h1>MacBook Neo</h1>
+                        <h1>iPhone 17 Pro Max</h1>
                     </div>
                     <div class="card-desc">
-                        <h2>The magic of Mac at a surprising price.</h2>
+                        <h2>Powerful performance with a modern and premium design.</h2>
                     </div>
                     <div class="card-price">
-                        <p class="price">Price: $849</p>
+                        <p class="price">Price: $1399</p>
                     </div>
                     <div class="card-media">
-                        <img src="laptop.png" alt="MacBook Neo">
+                        <img src="iPhone17ProMax.png" alt="iPhone 17 Pro Max">
                     </div>
                 </div>
             </div>
@@ -82,16 +85,16 @@
             <div class="col-s-6 col-3">
                 <div class="apple-card">
                     <div class="card-name">
-                        <h1>MacBook Air</h1>
+                        <h1>iPad Pro</h1>
                     </div>
                     <div class="card-desc">
-                        <h2>Light, fast and simple for everyday work.</h2>
+                        <h2>A professional tablet for study, design and daily creativity.</h2>
                     </div>
                     <div class="card-price">
-                        <p class="price">Price: $999</p>
+                        <p class="price">Price: $1099</p>
                     </div>
                     <div class="card-media">
-                        <img src="laptop.png" alt="MacBook Air">
+                        <img src="iPadpro.png" alt="iPad Pro">
                     </div>
                 </div>
             </div>
@@ -99,27 +102,27 @@
             <div class="col-s-6 col-3">
                 <div class="apple-card">
                     <div class="card-name">
-                        <h1>MacBook Pro</h1>
+                        <h1>Sony PS5</h1>
                     </div>
                     <div class="card-desc">
-                        <h2>More power for study and creative tasks.</h2>
+                        <h2>Next-generation gaming with fast loading and immersive control.</h2>
                     </div>
                     <div class="card-price">
-                        <p class="price">Price: $1299</p>
+                        <p class="price">Price: $499</p>
                     </div>
                     <div class="card-media">
-                        <img src="laptop.png" alt="MacBook Pro">
+                        <img src="Ps5.jpg" alt="Sony PS5">
                     </div>
                 </div>
             </div>
 
             <div class="col-s-6 col-3">
-                <div class="apple-card">
+                <div class="apple-card" onclick="location.href='search.html'">
                     <div class="card-name">
                         <h1>Learn More</h1>
                     </div>
                     <div class="card-desc">
-                        <h2>More products are waiting for you.</h2>
+                        <h2>More latest devices are waiting for you.</h2>
                     </div>
                     <div class="card-price">
                         <p class="price">&nbsp;</p>
@@ -132,6 +135,7 @@
         </div>
 
         <!-- Product part 2 -->
+
         <div class="row">
             <div class="col-12 product-class">
                 <h2>Popular Choices. <span>Find the right one for you.</span></h2>
@@ -142,16 +146,16 @@
             <div class="col-s-6 col-3">
                 <div class="apple-card">
                     <div class="card-name">
-                        <h1>iPad Air</h1>
+                        <h1>Sony Camera</h1>
                     </div>
                     <div class="card-desc">
-                        <h2>Portable and convenient for daily use.</h2>
+                        <h2>Capture clear and detailed moments with professional quality.</h2>
                     </div>
                     <div class="card-price">
-                        <p class="price">Price: $699</p>
+                        <p class="price">Price: $2299</p>
                     </div>
                     <div class="card-media">
-                        <img src="laptop.png" alt="iPad Air">
+                        <img src="SonyCamera.jpg" alt="Sony Camera">
                     </div>
                 </div>
             </div>
@@ -159,16 +163,16 @@
             <div class="col-s-6 col-3">
                 <div class="apple-card">
                     <div class="card-name">
-                        <h1>iPhone Neo</h1>
+                        <h1>Nintendo Switch</h1>
                     </div>
                     <div class="card-desc">
-                        <h2>Smart, elegant and easy to use.</h2>
+                        <h2>Flexible gaming for home entertainment and travel.</h2>
                     </div>
                     <div class="card-price">
-                        <p class="price">Price: $799</p>
+                        <p class="price">Price: $299</p>
                     </div>
                     <div class="card-media">
-                        <img src="laptop.png" alt="iPhone Neo">
+                        <img src="switch.png" alt="Nintendo Switch">
                     </div>
                 </div>
             </div>
@@ -176,27 +180,27 @@
             <div class="col-s-6 col-3">
                 <div class="apple-card">
                     <div class="card-name">
-                        <h1>AirPods Max</h1>
+                        <h1>iPhone</h1>
                     </div>
                     <div class="card-desc">
-                        <h2>Clear sound and comfortable listening.</h2>
+                        <h2>Simple, elegant and reliable for everyday communication.</h2>
                     </div>
                     <div class="card-price">
-                        <p class="price">Price: $499</p>
+                        <p class="price">Price: $899</p>
                     </div>
                     <div class="card-media">
-                        <img src="laptop.png" alt="AirPods Max">
+                        <img src="iPhone.png" alt="iPhone">
                     </div>
                 </div>
             </div>
 
             <div class="col-s-6 col-3">
-                <div class="apple-card">
+                <div class="apple-card" onclick="location.href='search.html'">
                     <div class="card-name">
                         <h1>Learn More</h1>
                     </div>
                     <div class="card-desc">
-                        <h2>See more devices and details here.</h2>
+                        <h2>See more best-selling devices and details here.</h2>
                     </div>
                     <div class="card-price">
                         <p class="price">&nbsp;</p>
@@ -209,6 +213,7 @@
         </div>
 
         <!-- Store difference -->
+
         <div class="row">
             <div class="col-12 product-class">
                 <h2>The MY-Store difference. <span>What makes us different.</span></h2>
@@ -217,7 +222,7 @@
 
         <div class="row">
             <div class="col-s-6 col-3">
-                <div class="intro-card">
+                <div class="intro-card intro-click" onclick="showIntroCard(0)">
                     <div class="intro-icon-area">
                         <img src="upload.png" alt="Upload" class="small-icon">
                     </div>
@@ -231,7 +236,7 @@
             </div>
 
             <div class="col-s-6 col-3">
-                <div class="intro-card">
+                <div class="intro-card intro-click" onclick="showIntroCard(1)">
                     <div class="intro-icon-area">
                         <img src="buy.png" alt="Buy" class="small-icon">
                     </div>
@@ -245,7 +250,7 @@
             </div>
 
             <div class="col-s-6 col-3">
-                <div class="intro-card">
+                <div class="intro-card intro-click" onclick="showIntroCard(2)">
                     <div class="intro-icon-area">
                         <img src="fast.png" alt="Fast" class="small-icon">
                     </div>
@@ -259,7 +264,7 @@
             </div>
 
             <div class="col-s-6 col-3">
-                <div class="intro-card">
+                <div class="intro-card intro-click" onclick="showIntroCard(3)">
                     <div class="intro-icon-area">
                         <div class="more-icon">...</div>
                     </div>
@@ -274,5 +279,17 @@
         </div>
 
     </div>
+
+    <!-- floating island -->
+
+    <div id="introModal" class="intro-modal">
+        <div class="intro-modal-box">
+            <div class="intro-modal-close" onclick="closeIntroModal()">X</div>
+            <h2 id="introModalTitle">Title</h2>
+            <p id="introModalText">Text</p>
+        </div>
+    </div>
+
+    <script src="homepage.js"></script>
 </body>
 </html>
