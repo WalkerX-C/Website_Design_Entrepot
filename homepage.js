@@ -24,25 +24,3 @@ function closeIntroModal()
     document.getElementById("introModal").style.display = "none";
 }
 
-function goToProductPage(productName)
-{
-    window.location.href = "search.html";
-}
-
-window.onclick = function(event)
-{
-    var modal = document.getElementById("introModal");
-
-    if (event.target == modal)
-    {
-        modal.style.display = "none";
-    }
-}
-
-document.onkeydown = function(event)
-{
-    if (event.key == "Escape")
-    {
-        closeIntroModal();
-    }
-}
