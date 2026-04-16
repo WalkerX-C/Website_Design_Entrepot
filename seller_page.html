@@ -4,9 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Items</title>
 
+    <!-- Apple style is a form I learnt form the group member-->
     <style>
         * {
             box-sizing: border-box;
+        }
+
+        /* make header in the center */
+        .header-title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
         }
 
         body {
@@ -14,6 +22,30 @@
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
+        }
+
+        /* add menu to keep the same with other group members */
+        .menu {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .menu a {
+            display: inline-block;
+            text-decoration: none;
+            color: #333;
+            padding: 12px 18px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            transform: scale(1.08);
+            background-color: #f0f0f0;
+            border-radius: 6px;
         }
 
         /* response Grid View system*/
@@ -47,12 +79,15 @@
         }
 
         /* page layout style */
-        .header {
+
+        /* header style contradict with icon*/
+
+        /* .header {
             background-color: #ffffff;
             text-align: center;
             padding: 10px;
-            border-bottom: 1px solid #d2d2d7;
-        }
+            border-bottom: 1px solid #d2d2d7;        
+        }  */ 
 
         .container {
             background-color: #ffffff;
@@ -60,6 +95,10 @@
             padding: 10px;
             border: 1px solid #d2d2d7;
             max-width: 800px;
+            /* add Apple style */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+            padding: 25px 20px;    
         }
 
         h1, h2 {
@@ -76,6 +115,9 @@
             border: 1px solid #d2d2d7;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 16px;
+            /* add Apple style */
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
         }
 
         /* button style */
@@ -88,6 +130,9 @@
             font-size: 18px;
             margin-top: 20px;
             cursor: pointer;
+            /* add Apple style */
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 113, 227, 0.25);
         }
         
         .add-btn {
@@ -97,6 +142,8 @@
             padding: 10px 15px;
             margin-top: 10px;
             cursor: pointer;
+            /* add Apple style */
+            border-radius: 8px;
         }
 
         /* form style */
@@ -112,9 +159,29 @@
     </style>
 </head>
 <body>
+    <!-- make icon and header in the same row -->
+    <div class="icon-row header-row">
+        <div class="header-title">
+            <h2>Seller Center</h2>
+        </div>
+        
+        <div class="col-2 logo-area" style="float: right; text-align: right;">
+            <a href="homepage.html" class="logo">
+                <img src="icon.png" alt="Logo" width="45">
+            </a>
+        </div>
+    </div>
     
-    <div class="header">
-        <h2>Seller Center</h2>
+        
+
+    <!-- add menu, keep the same as other group members -->
+    <div class="row">
+        <div class="col-12 menu">
+            <a href="homepage.html">HomePage</a>
+            <a href="search.html">Search</a>
+            <a href="sell.html">Seller Page</a>
+            <a href="aboutus.html">About Us</a>
+        </div>
     </div>
 
     <div class="container row">
