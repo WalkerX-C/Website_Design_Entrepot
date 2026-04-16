@@ -138,12 +138,16 @@ body {
 /* top product pictures */
 .picture-box {
     height: 220px;
+    text-align: center;
 }
 
 .picture-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* 关键 */
+    max-width: 100%;
+    max-height: 220px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
     border-radius: 18px;
     transition: 0.3s;
 }
@@ -164,10 +168,6 @@ body {
 
 .apple-card:hover {
     transform: translateY(-8px) scale(1.02);
-}
-
-.product-link {
-    cursor: pointer;
 }
 
 /* fixed internal sections */
