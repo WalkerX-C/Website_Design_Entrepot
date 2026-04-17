@@ -93,3 +93,191 @@ body { margin: 0; background-color: var(--surface-bg); }
 
 .action-btn:hover { opacity: 0.9; transform: scale(1.02); }
 .accent-blue { color: var(--brand-main); }
+
+.auth-hero-row {
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.auth-hero-unit {
+    text-align: center;
+}
+
+.auth-logo-link {
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.auth-logo-link--sm {
+    padding: 8px;
+}
+
+.auth-main-row {
+    justify-content: center;
+}
+
+.auth-narrow {
+    max-width: 500px;
+}
+
+.auth-card {
+    text-align: center;
+}
+
+.auth-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.auth-lead {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-footer {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.auth-muted-link {
+    color: #666;
+    text-decoration: none;
+}
+
+.auth-muted-text {
+    color: #666;
+}
+
+.auth-divider {
+    color: #ccc;
+    margin: 0 10px;
+}
+
+.auth-accent-link {
+    color: var(--brand-main);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ----- Search page ----- */
+.search-top-row {
+    align-items: center;
+    padding: 20px 0;
+}
+
+.search-title-unit {
+    flex: 1;
+}
+
+.search-hero-title {
+    font-size: clamp(32px, 5vw, 64px);
+    margin: 0;
+}
+
+.search-logo-unit {
+    flex: 0 0 auto;
+}
+
+.search-nav-row {
+    margin-bottom: 30px;
+}
+
+.search-full-width {
+    width: 100%;
+}
+
+.search-nav {
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.search-nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.search-nav a.is-current {
+    font-weight: bold;
+}
+
+.search-hero-card {
+    text-align: center;
+    padding: 50px;
+}
+
+.search-prompt {
+    margin-bottom: 25px;
+}
+
+.search-field-row {
+    display: flex;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.modern-input.input-flush {
+    margin-bottom: 0;
+}
+
+.action-btn.search-go-btn {
+    padding: 0 40px;
+}
+
+.search-results-heading-row {
+    margin-top: 40px;
+}
+
+.search-section-title {
+    font-size: 30px;
+}
+
+.search-section-title .muted {
+    color: #ccc;
+    font-weight: normal;
+}
+
+.search-placeholder-hint {
+    text-align: center;
+    color: #999;
+    padding: 40px;
+}
+
+.search-empty {
+    text-align: center;
+    padding: 50px;
+    color: #666;
+}
+
+.search-result-card {
+    min-height: 460px;
+    margin-bottom: 20px;
+}
+
+.search-result-name {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.search-result-desc {
+    margin: 0 0 12px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.search-result-price {
+    margin: 0 0 16px;
+    font-weight: 700;
+    color: var(--brand-main);
+}
