@@ -8,49 +8,51 @@
 </head>
 <body>
     <div class="main-wrapper">
-        <div class="layout-group" style="align-items: center; padding: 20px 0;">
-            <div class="display-unit" style="flex: 1;">
-                <h1 style="font-size: clamp(32px, 5vw, 64px); margin: 0;">Search</h1>
+        <div class="layout-group search-top-row">
+            <div class="display-unit search-title-unit">
+                <h1 class="search-hero-title">Search</h1>
             </div>
-            <div class="display-unit" style="flex: 0 0 auto;">
-                <a href="homepage.html" style="background: white; padding: 8px; border-radius: 50%; display: inline-block;">
+            <div class="display-unit search-logo-unit">
+                <a href="homepage.html" class="auth-logo-link auth-logo-link--sm">
                     <img src="icon.png" alt="Logo" width="45">
                 </a>
             </div>
         </div>
 
-        <div class="layout-group" style="margin-bottom: 30px;">
-            <div class="display-unit" style="width: 100%;">
-                <nav style="background: white; border-radius: 15px; text-align: center; padding: 10px; box-shadow: var(--card-shadow);">
-                    <a href="homepage.html" style="padding: 10px 20px; text-decoration: none; color: #333;">HomePage</a>
-                    <a href="search.html" style="padding: 10px 20px; text-decoration: none; color: #333; font-weight: bold;">Search</a>
-                    <a href="sell.html" style="padding: 10px 20px; text-decoration: none; color: #333;">Seller Page</a>
-                    <a href="aboutus.html" style="padding: 10px 20px; text-decoration: none; color: #333;">About Us</a>
-                </nav>
-            </div>
-        </div>
-
-        <div class="layout-group">
-            <div class="display-unit">
-                <div class="premium-card" style="text-align: center; padding: 50px;">
-                    <h2 class="accent-blue" style="margin-bottom: 25px;">What are you looking for?</h2>
-                    <div style="display: flex; gap: 15px; max-width: 800px; margin: 0 auto;">
-                        <input type="text" id="userSearchInput" class="modern-input" placeholder="Search laptops, phones..." style="margin-bottom: 0;">
-                        <button class="action-btn" onclick="performSearch()" style="padding: 0 40px;">GO</button>
+        <div class="layout-group search-nav-row">
+            <div class="display-unit search-full-width">
+                <div class="row">
+                    <div class="col-12 menu">
+                        <a href="purchaser_login.html">Buyer Login</a>
+                        <a href="search.html" class="is-current">Search</a>
+                        <a href="seller_page.html">Product Registration</a>
+                        <a href="seller_login.html">Seller Login</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="layout-group" style="margin-top: 40px;">
+        <div class="layout-group">
             <div class="display-unit">
-                <h2 style="font-size: 30px;">Results. <span style="color: #ccc; font-weight: normal;">Find the best deals.</span></h2>
+                <div class="premium-card search-hero-card">
+                    <h2 class="accent-blue search-prompt">What are you looking for?</h2>
+                    <div class="search-field-row">
+                        <input type="text" id="userSearchInput" class="modern-input input-flush" placeholder="Search laptops, phones...">
+                        <button type="button" class="action-btn search-go-btn" onclick="performSearch()">GO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layout-group search-results-heading-row">
+            <div class="display-unit">
+                <h2 class="search-section-title">Results. <span class="muted">Find the best deals.</span></h2>
             </div>
         </div>
 
         <div class="layout-group" id="searchResults">
-            <div class="display-unit" style="width: 100%;">
-                <p style="text-align:center; color:#999; padding: 40px;">Type something above to start searching.</p>
+            <div class="display-unit search-full-width">
+                <p class="search-placeholder-hint">Type something above to start searching.</p>
             </div>
         </div>
     </div>
