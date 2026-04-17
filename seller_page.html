@@ -177,10 +177,10 @@
     <!-- add menu, keep the same as other group members -->
     <div class="row">
         <div class="col-12 menu">
-            <a href="homepage.html">HomePage</a>
+            <a href="purchaser_login.html">Buyer Login</a>
             <a href="search.html">Search</a>
-            <a href="sell.html">Seller Page</a>
-            <a href="aboutus.html">About Us</a>
+            <a href="seller_page.html">Product Registration</a>
+            <a href="seller_registration.html">Seller Login</a>
         </div>
     </div>
 
@@ -249,14 +249,14 @@
     <script>
         // TierRow
         function addTierRow() {
-            var tableBody = document.getElementById("tierTableBody");
-            var newRow = "<tr><td><input type='number'></td><td><input type='number'></td><td><input type='number'></td></tr>"
+            tableBody = document.getElementById("tierTableBody");
+            newRow = "<tr><td><input type='number'></td><td><input type='number'></td><td><input type='number'></td></tr>"
             tableBody.innerHTML = tableBody.innerHTML + newRow;
         }
 
         //submit form
         function submitForm() {
-            var name = document.getElementById("productName").value;
+            name = document.getElementById("productName").value;
 
             if (name == "") {
                 window.alert("Please input the name of product!")
