@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Seller Registration</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="top-header-section">
+            <h1 id="text">Welcome to MY Store</h1>
+            <a href="homepage.html" class="logo"><img src="home.png" alt="Logo"></a>
+        </div>
+
+        <div class="form-card-container">
+            <div class="form-card">
+                <h1>Create your account</h1>
+                <form id="registrationForm" onsubmit="return validateForm()" onreset="resetForm()">
+                    
+                    <div class="form-group">
+                        <label>Name:</label>
+                        <input type="text" id="name" name="name" onblur="validateName()">
+                        <p class="error-message" id="nameError"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="text" id="email" name="email" onblur="validateEmail()">
+                        <p class="error-message" id="emailError"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Address:</label>
+                        <input type="text" id="address" name="address" onblur="validateAddress()">
+                        <p class="error-message" id="addressError"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone:</label>
+                        <input type="text" id="phone" name="phone" onblur="validatePhone()">
+                        <p class="error-message" id="phoneError"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Username:</label>
+                        <input type="text" id="username" name="username" onblur="validateUsername()">
+                        <p class="error-message" id="usernameError"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password:</label>
+                        <input type="password" id="password" name="password" onblur="validatePassword()">
+                        <p class="error-message" id="passwordError"></p>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+    <div class="footer">
+        <p>2026 All rights reserved.</p>
+    </div>
+</html>

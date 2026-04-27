@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Items</title>
+
+    <!-- Apple style is a form I learnt from the group member-->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* make header in the center */
+        .header-title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        }
+
+        body {
+            background-color: #f5f5f7;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* add menu to keep the same with other group members */
+        .menu {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .menu a {
+            display: inline-block;
+            text-decoration: none;
+            color: #333;
+            padding: 12px 18px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            transform: scale(1.08);
+            background-color: #f0f0f0;
+            border-radius: 6px;
+        }
+
+        /* response Grid View system*/
+        .row::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        /* phone in first */
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+            width: 100%;
+        }
+
+        /* desktop */
+        @media only screen and (min-width: 768px) {
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+        }
+
+        /* page layout style */
+
+        /* header style contradict with icon*/
+
+        /* .header {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #d2d2d7;        
+        }  */ 
+
+        .container {
+            background-color: #ffffff;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #d2d2d7;
+            max-width: 800px;
+            /* add Apple style */
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+            padding: 25px 20px;    
+        }
+
+        h1, h2 {
+            color: #1d1d1f
+        }
+
+        /* fundamental style of list element */
+        input[type="text"],
+        input[type="number"],
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #d2d2d7;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            /* add Apple style */
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+        }
+
+        /* button style */
+        .submit-btn {
+            background-color: #0071e3;
+            color: white;
+            padding: 15px;
+            border: none;
+            width: 100%;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+            /* add Apple style */
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 113, 227, 0.25);
+        }
+        
+        .add-btn {
+            background-color: #e8e8ed;
+            color: #1d1d1f;
+            border: 1px solid #d2d2d7;
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            /* add Apple style */
+            border-radius: 8px;
+        }
+
+        /* form style */
+        table {
+            width: 100%;
+        }
+
+        td, th {
+            border-bottom: 1px solid #d2d2d7;
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- make icon and header in the same row -->
+    <div class="icon-row header-row">
+        <div class="header-title">
+            <h2>Seller Center</h2>
+        </div>
+        
+        <div class="col-2 logo-area" style="float: right; text-align: right;">
+            <a href="homepage.html" class="logo">
+                <img src="icon.png" alt="Logo" width="45">
+            </a>
+        </div>
+    </div>
+    
+        
+
+    <!-- add menu, keep the same as other group members -->
+    <div class="row">
+        <div class="col-12 menu">
+            <a href="purchaser_login.html">Buyer Login</a>
+            <a href="search.html">Search</a>
+            <a href="seller_page.html">Product Registration</a>
+            <a href="seller_login.html">Seller Login</a>
+        </div>
+    </div>
+
+    <div class="container row">
+        <form id="productForm">
+
+            <div class="col-12">
+                <h2>Basic Information</h2>
+            </div>
+
+            <div class="col-12">
+                <label>Product Name</label><br>
+                <input type="text" id="productName" placeholder="e.g.: Apple iPhone 15 Pro">
+            </div>
+
+            <div class="col-6">
+                <label>Brand</label><br>
+                <input type="text" id="brand" placeholder="e.g.: Apple">
+            </div>
+
+            <div class="col-6">
+                <label>Model</label><br>
+                <input type="text" id="model" placeholder="e.g.: A2994">
+            </div>
+
+            <div class="col-6">
+                <label>Basic Price</label><br>
+                <input type="text" id="basicPrice" placeholder="Please enter a number">
+            </div>
+
+            <div class="col-6">
+                <label>Color</label><br>
+                <input type="text" id="color" placeholder="e.g.: Rose Gold">
+            </div>
+
+            <div class="col-12">
+                <h2>Product Image</h2>
+                <input type="file" id="productImage">
+            </div>
+
+            <div class="col-12">
+                <h2>Tier Price Table</h2>
+                <table id="tierTable">
+                    <tr>
+                        <th>Minimum Quantity</th>
+                        <th>Maximum Quantity</th>
+                        <th>Unit Price</th>
+                    </tr>
+                    <tbody id="tierTableBody">
+                        <tr>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                            <td><input type="number"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="button" class="add-btn" value="+ Add Tier Price" onclick="addTierRow()">
+            </div>
+
+            <div class="col-12">
+                <input type="button" value="Save & Publish" class="submit-btn" onclick="submitForm()">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // TierRow
+        function addTierRow() {
+            tableBody = document.getElementById("tierTableBody");
+            newRow = "<tr><td><input type='number'></td><td><input type='number'></td><td><input type='number'></td></tr>"
+            tableBody.innerHTML = tableBody.innerHTML + newRow;
+        }
+
+        //submit form
+        function submitForm() {
+            name = document.getElementById("productName").value;
+
+            if (name == "") {
+                window.alert("Please input the name of product!")
+            } else {
+                window.alert("The product " + name + " has saved successfully!")
+            }
+        }
+    </script>
+</body>
+</html>

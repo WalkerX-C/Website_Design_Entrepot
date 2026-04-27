@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MY Store - Search</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="module_custom.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="layout-group search-top-row">
+            <div class="display-unit search-title-unit">
+                <h1 class="search-hero-title">Search</h1>
+            </div>
+            <div class="display-unit search-logo-unit">
+                <a href="homepage.html" class="auth-logo-link auth-logo-link--sm">
+                    <img src="icon.png" alt="Logo" width="45">
+                </a>
+            </div>
+        </div>
+
+        <div class="layout-group search-nav-row">
+            <div class="display-unit search-full-width">
+                <nav class="search-nav">
+                    <a href="purchaser_login.html">Buyer Login</a>
+                    <a href="search.html" class="is-current">Search</a>
+                    <a href="seller_page.html">Product Registration</a>
+                    <a href="seller_login.html">Seller Login</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="layout-group">
+            <div class="display-unit">
+                <div class="premium-card search-hero-card">
+                    <h2 class="accent-blue search-prompt">What are you looking for?</h2>
+                    <div class="search-field-row">
+                        <input type="text" id="userSearchInput" class="modern-input input-flush" placeholder="Search laptops, phones...">
+                        <button type="button" class="action-btn search-go-btn" onclick="performSearch()">GO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layout-group search-results-heading-row">
+            <div class="display-unit">
+                <h2 class="search-section-title">Results. <span class="muted">Find the best deals.</span></h2>
+            </div>
+        </div>
+
+        <div class="layout-group" id="searchResults">
+            <div class="display-unit search-full-width">
+                <p class="search-placeholder-hint">Type something above to start searching.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="search.js"></script>
+</body>
+</html>

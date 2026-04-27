@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MY Store - Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="module_custom.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="layout-group auth-hero-row">
+            <div class="display-unit auth-hero-unit">
+                <a href="homepage.html" class="auth-logo-link">
+                    <img src="icon.png" alt="Logo" width="60">
+                </a>
+            </div>
+        </div>
+
+        <div class="layout-group auth-main-row">
+            <div class="display-unit auth-narrow">
+                <div class="premium-card auth-card">
+                    <h1 class="accent-blue auth-title">Create Account</h1>
+                    <p class="auth-lead">Join MY Store today.</p>
+
+                    <form id="registerForm" class="auth-form">
+                        <input type="text" id="regUser" class="modern-input" placeholder="Choose a Username" required>
+                        <input type="email" id="regEmail" class="modern-input" placeholder="Email Address" required>
+                        <input type="password" id="regPass" class="modern-input" placeholder="Password" required>
+                        <input type="password" id="regConfirm" class="modern-input" placeholder="Confirm Password" required>
+                        <button type="submit" class="action-btn">Sign Up</button>
+                    </form>
+
+                    <div class="auth-footer">
+                        <span class="auth-muted-text">Already have an account? </span>
+                        <a href="purchaser_login.html" class="auth-accent-link">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

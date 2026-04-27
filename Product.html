@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Product</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="font-family: Arial; text-align:center;">
+
+<h1>Product Details</h1>
+
+<div id="box">Loading...</div>
+
+<script>
+
+var products = [
+    { name: "MacBook Neo", price: "$849", img: "laptop.png", desc: "The magic of Mac at a surprising price." },
+    { name: "MacBook Air", price: "$999", img: "laptop.png", desc: "Light, fast and simple." },
+    { name: "MacBook Pro", price: "$1299", img: "laptop.png", desc: "More power for tasks." },
+    { name: "iPad Air", price: "$699", img: "laptop.png", desc: "Portable and convenient." },
+    { name: "iPhone Neo", price: "$799", img: "laptop.png", desc: "Smart and elegant." },
+    { name: "AirPods Max", price: "$499", img: "laptop.png", desc: "Clear sound." }
+];
+
+function getId() {
+    var params = new URLSearchParams(window.location.search);
+    return params.get("id");
+}
+
+function show() {
+    var id = getId();
+    var box = document.getElementById("box");
+
+    if (id == null || products[id] == undefined) {
+        box.innerHTML = "Product not found";
+        return;
+    }
+
+    var p = products[id];
+
+    box.innerHTML =
+        "<h2>" + p.name + "</h2>" +
+        "<img src='" + p.img + "' style='width:300px'><br><br>" +
+        "<p><b>Price:</b> " + p.price + "</p>" +
+        "<p>" + p.desc + "</p>" +
+       "<a href='search.html' style='display:inline-block; margin-top:20px; padding:10px 20px; background-color:#666edc; color:white; text-decoration:none; border-radius:10px;'>Back to Search</a>";
+}
+
+show();
+
+</script>
+
+</body>
+</html>

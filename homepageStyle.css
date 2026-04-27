@@ -1,0 +1,389 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+.page {
+    width: 96%;
+    max-width: 1500px;
+    margin: 0 auto 40px auto;
+}
+
+/* default: phone */
+.col-s-2  { width: 100%; }
+.col-s-6  { width: 100%; }
+.col-s-10 { width: 100%; }
+.col-s-12 { width: 100%; }
+.col-2    { width: 100%; }
+.col-3    { width: 100%; }
+.col-10   { width: 100%; }
+.col-12   { width: 100%; }
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* tablet */
+@media only screen and (min-width: 600px) {
+    .col-s-2  { width: 16.66%; }
+    .col-s-6  { width: 50%; }
+    .col-s-10 { width: 83.33%; }
+    .col-s-12 { width: 100%; }
+}
+
+/* computer */
+@media only screen and (min-width: 768px) {
+    .col-2  { width: 16.66%; }
+    .col-3  { width: 25%; }
+    .col-10 { width: 83.33%; }
+    .col-12 { width: 100%; }
+}
+
+.col-2, .col-3, .col-10, .col-12,
+.col-s-2, .col-s-6, .col-s-10, .col-s-12 {
+    float: left;
+    padding: 15px;
+}
+
+/* top part */
+.logo-area {
+    text-align: center;
+    padding-top: 18px;
+}
+
+.logo {
+    display: inline-block;
+    padding: 8px;
+    background-color: white;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.08);
+}
+
+.logo img {
+    display: block;
+    height: auto;
+}
+
+.header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: left;
+}
+
+/* menu */
+.menu {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    padding: 12px 18px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    transform: scale(1.08);
+    background-color: #f0f0f0;
+    border-radius: 6px;
+}
+
+/* titles */
+.section-center {
+    text-align: center;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.product-class {
+    padding-top: 8px;
+    padding-bottom: 0;
+}
+
+.product-class h2 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+.product-class span {
+    color: rgb(200, 200, 200);
+    font-weight: normal;
+}
+
+/* top product pictures */
+.picture-box {
+    height: 220px;
+    text-align: center;
+}
+
+.picture-box img {
+    max-width: 100%;
+    max-height: 220px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.picture-box img:hover {
+    transform: scale(1.03);
+}
+
+/* product cards */
+.apple-card {
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    padding: 22px;
+    height: 560px;
+    transition: 0.3s;
+}
+
+.apple-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* fixed internal sections */
+.card-name {
+    height: 10%;
+    overflow: hidden;
+}
+
+.card-name h1 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.card-desc {
+    height: 20%;
+    overflow: hidden;
+}
+
+.card-desc h2 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: normal;
+    color: #444;
+    line-height: 1.5;
+}
+
+.card-price {
+    height: 10%;
+    overflow: hidden;
+}
+
+.card-price .price {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.card-media {
+    height: 60%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 30px;
+    margin: 40px auto 0 auto;
+}
+
+/* learn more card image area */
+.more-box {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 78px;
+    color: #999;
+    line-height: 250px;
+}
+
+/* intro cards */
+.intro-card {
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    padding: 24px;
+    height: 300px;
+    transition: 0.3s;
+}
+
+.intro-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+
+.intro-icon-area {
+    height: 25%;
+}
+
+.small-icon {
+    width: 50px;
+    height: auto;
+    display: block;
+}
+
+.more-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: #f2f2f2;
+    color: #999;
+    text-align: center;
+    line-height: 50px;
+    font-size: 28px;
+}
+
+.intro-title {
+    height: 25%;
+    overflow: hidden;
+}
+
+.intro-title h3 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.intro-text {
+    height: 50%;
+    overflow: hidden;
+}
+
+.intro-text p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* colors */
+.blue1 {
+    color: rgb(102, 110, 200);
+}
+
+.blue2 {
+    color: rgb(102, 192, 200);
+}
+
+.green {
+    color: rgb(193, 202, 96);
+}
+
+.gray {
+    color: #888;
+}
+
+/* floating island */
+.intro-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.20);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.intro-modal-box {
+    width: 70%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    margin: 10% auto 0 auto;
+    transition: 0.3s;
+}
+
+.intro-modal-box h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.intro-modal-box p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.intro-modal-close {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: #f2f2f2;
+    color: #666;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    float: right;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.intro-modal-close:hover {
+    transform: scale(1.08);
+}
+
+/* tablet and phone */
+@media only screen and (max-width: 767px) {
+    .header h1 {
+        font-size: 40px;
+        line-height: 1.3;
+    }
+
+    .apple-card {
+        height: 500px;
+    }
+
+    .intro-modal-box {
+        width: 90%;
+        margin: 80px auto 0 auto;
+        padding: 20px;
+    }
+
+    .intro-modal-box h2 {
+        font-size: 24px;
+    }
+
+    .intro-modal-box p {
+        font-size: 16px;
+    }
+}
