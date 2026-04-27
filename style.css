@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+.top-header-section {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.top-header-section h1 {
+    display: inline-block;
+    font-size: 32px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.form-card-container {
+    width: 100%;
+    text-align: center;
+}
+
+.form-card {
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.form-card h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: inline-block;
+    width: 80px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.form-group input {
+    width: 280px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin: 2px 0 0 95px;
+    height: 15px;
+}
+
+.input-error {
+    border: 2px solid red !important;
+}
+
+.input-success {
+    border: 2px solid green !important;
+}
+
+.form-buttons {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.form-buttons input {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .form-group label {
+        display: block;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+    .form-group input {
+        width: 95%;
+    }
+    .error-message {
+        margin-left: 0;
+    }
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+}
